@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device Ready Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    function onLoad() {
+      document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    function video(videoSelect) {
+      // Now safe to use device APIs
+      try {
+        window.InAppYouTube.openVideo(videoSelect.value, {
+          fullscreen: true
+        }, function(result) {
+          // console.log(JSON.stringify(result));
+        }, function(reason) {
+          // console.log(reason);
+        });
+      } catch(e) {
+        // Exception!
+      }
+    }
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+    <button id="NqJcMsDxvd4" value="NqJcMsDxvd4" onclick="video(this)"> Teste NqJcMsDxvd4</button>
+  </body>
+</html>
